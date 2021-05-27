@@ -258,6 +258,9 @@ open class DropDown : UITextField{
 
     public func hideList() {
         TableWillDisappearCompletion()
+        if self.table == nil{
+            return
+        }
         UIView.animate(withDuration: 1.0,
                        delay: 0.4,
                        usingSpringWithDamping: 0.9,
